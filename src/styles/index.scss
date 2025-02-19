@@ -1,0 +1,37 @@
+// Vendors
+// ---------------------------------------
+@import './vendors/normalize';
+@import './vendors/accordion';
+
+// Globals
+// ---------------------------------------
+@import './global/variables';
+@import './global/mixins';
+@import './global/global';
+@import './global/utils';
+
+// fonts
+@import './global/fonts';
+
+// Components
+// ---------------------------------------
+@import '../components/Container/Container';
+@import '../components/Burger/Burger';
+@import '../components/Preloader/Preloader';
+@import '../components/Header/Header';
+@import '../components/Navigation/Navigation';
+@import '../components/NavLink/NavLink';
+@import '../components/SkillCard/SkillCard';
+@import '../components/FeedbackForm/FeedbackForm';
+@import '../components/CustomInput/CustomInput';
+@import '../components/Footer/Footer';
+
+// Blocks
+// ---------------------------------------
+@import '../views/Hero/Hero';
+@import '../views/Interiors/Interiors';
+@import '../views/AboutCompany/AboutCompany';
+@import '../views/Gallery/Gallery';
+@import '../views/Skills/Skills';
+@import '../views/Services/Services';
+@import '../views/Feedback/Feedback';

@@ -1,0 +1,50 @@
+---
+import CustomImage from "../CustomImage/CustomImage.astro";
+
+interface Props {
+  className?: string,
+  id: number,
+  text: string,
+  imagePath: string,
+  imagePath2x: string,
+  imagePathTablet: string,
+  imagePathTablet2x: string,
+  altText: string
+};
+
+const {
+  className,
+  id,
+  text,
+  imagePath,
+  imagePath2x,
+  imagePathTablet,
+  imagePathTablet2x,
+  altText
+} = Astro.props;
+
+const formatId = (id: number): string => {
+  if (id < 10) {
+    return `0${id}`;
+  };
+  return `${id}`;
+};
+---
+
+<div class:list={["skill-card", className]}>
+  <span class="skill-card__id">{ formatId(id) }</span>
+  <p class="skill-card__text" set:html={ text }></p>
+  <div class="skill-card__image">
+    <CustomImage 
+      image={{
+        desktop: imagePath,
+        desktop2x: imagePath2x,
+        tablet: imagePathTablet,
+        tablet2x: imagePathTablet2x
+      }},
+      mediaTablet={1208}
+      altText={ altText }
+      className="skill-card__img"
+    />
+  </div>
+</div>

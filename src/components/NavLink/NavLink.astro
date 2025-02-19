@@ -1,0 +1,12 @@
+---
+interface Props {
+  title: string,
+  link: string,
+  className?: string,
+  ariaInfo: string
+};
+
+const { title, link, className, ariaInfo } = Astro.props;
+---
+
+<a class:list={["nav-link", className]} href={ link } set:html={ title } aria-label={ ariaInfo }></a>

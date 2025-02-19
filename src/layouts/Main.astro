@@ -1,0 +1,22 @@
+---
+import Layout from '@layouts/root';
+import Preloader from '@/components/Preloader/Preloader.astro';
+import Header from '@/components/Header/Header.astro';
+import Footer from '@/components/Footer/Footer.astro';
+
+interface Props {
+  title: string;
+  headerMod?: string;
+};
+
+const { title } = Astro.props;
+---
+
+<Layout title={title}>
+  <Preloader />
+  <Header />
+  <main>
+    <slot />
+  </main>
+  <Footer />
+</Layout>

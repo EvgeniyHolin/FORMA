@@ -1,0 +1,23 @@
+---
+import NavLink from '@/components/NavLink/NavLink.astro'
+import NavList from '@/data/navigation.ts';
+
+interface Props {
+  navClass?: string,
+  className?: string,
+}
+
+const { navClass, className } = Astro.props;
+---
+
+<nav class:list={["main-nav", navClass]}>
+  <ul class="main-nav__list">
+    {
+      NavList.map(item => (
+        <li class="main-nav__item">
+          <NavLink className={ className } link={ item.link } title={ item.title } ariaInfo={ item.ariaInfo }/>
+        </li>
+      ))
+    }
+  </ul>
+</nav>

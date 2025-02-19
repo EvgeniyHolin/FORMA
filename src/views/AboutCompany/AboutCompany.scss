@@ -1,0 +1,105 @@
+.about-company {
+  padding: 0 0 178px;
+
+  @media (max-width: 1500px) {
+    padding: 0 0 148px;
+  }
+
+  @media (max-width: 1208px) {
+    padding: 0 0 120px;
+  }
+
+  @include vp-768 {
+    padding: 0 0 60px;
+  }
+
+  &__content {
+    position: relative;
+    padding: 387px 0 0;
+
+    @media (max-width: 1500px) {
+      padding: 247px 0 0;
+    }
+
+    @media (max-width: 1208px) {
+      padding: 174px 0 0;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    right: -115px;
+    width: 1060px;
+    height: 191px;
+
+    @media (max-width: 1500px) {
+      right: 0;
+      width: 742px;
+      height: 134px;
+    }
+
+    @media (max-width: 1208px) {
+      width: 458px;
+      height: 82px;
+    }
+
+    @media (max-width: 545px) {
+      top: 25%;
+      width: 229px;
+      height: 41px;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__title {
+    margin: 0 0 30px;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 70px;
+    
+    @media (max-width: 1500px) {
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    @media (max-width: 1208px) {
+      font-size: 30px;
+      line-height: 30px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 50px;
+    line-height: 55px;
+
+    &-accent {
+      color: $color-fallow;
+    }
+
+    @media (max-width: 1500px) {
+      max-width: 80%;
+      font-size: 28px;
+      line-height: 30px;
+    }
+
+    @include vp-1440 {
+      max-width: 75%;
+    }
+
+    @media (max-width: 1208px) {
+      font-size: 22px;
+      line-height: 24px;
+    }
+
+    @media (max-width: 950px) {
+      font-size: 20px;
+      max-width: 70%;
+    }
+
+    @include vp-768 {
+      max-width: 100%;
+    }
+  }
+}

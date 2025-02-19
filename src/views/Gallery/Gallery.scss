@@ -1,0 +1,223 @@
+.gallery {
+  position: relative;
+  margin: 0 0 60px;
+
+  @include vp-768 {
+    margin: 0 0 80px;
+  }
+
+  &__title {
+    margin: 0 0 60px;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 85px;
+    color: $color-fallow;
+    text-transform: uppercase;
+
+    @include vp-1440 {
+      font-size: 50px;
+      line-height: 50px;
+    }
+
+    @include vp-1024 {
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    @include vp-768 {
+      margin: 0 0 30px;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    top: 1%;
+    right: 20%;
+
+    @include vp-1440 {
+      gap: 20px;
+    }
+
+    @include vp-1024 {
+      top: 0;
+      gap: 10px;
+    }
+
+    @include vp-768 {
+      top: unset;
+      bottom: -50px;
+      right: 10%;
+      gap: 20px;
+    }
+  }
+
+  &__next,
+  &__prev {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border: 4px solid $color-white-smoke;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: color $transition-300, border-color $transition-300;
+
+    @include hover-focus {
+      outline: none;
+      color: $color-fallow;
+      border-color: $color-fallow;
+    }
+
+    @include vp-1440 {
+      width: 40px;
+      height: 40px;
+    }
+
+    @include vp-1024 {
+      width: 35px;
+      height: 35px;
+    }
+
+    @include vp-768 {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        width: 45px;
+        height: 45px;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &__icon {
+    width: 50%;
+    height: 50%;
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__slide {
+    position: relative;
+    padding: 30px;
+    flex-shrink: 0;
+    width: 100%;
+    height: auto;
+    border: 4px solid $color-fallow;
+    border-radius: 32px;
+    overflow: hidden;
+
+    @include vp-768 {
+      padding: 10px;
+    }
+  }
+
+  &__swiper-inner {
+    overflow: hidden;
+
+    @include vp-768 {
+      margin: 0 0 10px;
+    }
+  }
+
+  &__wrapper-inner {
+    display: flex;
+  }
+
+  &__slide-inner {
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+
+  &__picture {
+    margin: 0 auto;
+    width: 95%;
+    height: 95%;
+    border-radius: 32px;
+    overflow: hidden;
+
+    @include vp-768 {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__image {
+    position: relative;
+    top: -4px;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+  }
+
+  &__object {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  &__text {
+    position: relative;
+    font-family: $ff-toxigenesis;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 35px;
+
+    @include vp-1024 {
+      font-size: 25px;
+      line-height: 25px;
+    }
+
+    @include vp-768 {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    @media (max-width: 545px) {
+      font-size: 15px;
+      line-height: 15px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -130px;
+      width: 100px;
+      height: 4px;
+      transform: translateY(-50%);
+      background-color: $color-white-smoke;
+      border-radius: 50px;
+
+      @include vp-1024 {
+        left: -80px;
+        width: 60px;
+      }
+
+      @include vp-768 {
+        display: none;
+      }
+    }
+
+    &::after {
+      left: unset;
+      right: -130px;
+
+      @include vp-1024 {
+        right: -60px;
+      }
+    }
+  }
+}

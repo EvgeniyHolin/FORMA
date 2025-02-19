@@ -1,0 +1,31 @@
+---
+import { Icon } from "astro-icon/components";
+import Container from "../Container/Container.astro"
+import Navigation from '../Navigation/Navigation.astro';
+---
+
+<footer class="footer">
+  <Container>
+    <div class="footer__inner">
+      <div class="footer__contacts">
+        <h2 class="footer__title" id="contacts">Наши контакты</h2>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <Icon class="footer__icon" name='icon-phone' />
+            <a class="footer__contact" href="tel:79269731784">+7 (926) 973-17-84</a>
+          </li>
+          <li class="footer__item">
+            <Icon class="footer__icon" name='icon-mail' />
+            <a class="footer__contact" href="mailto:formagroup@inbox.ru">formagroup@inbox.ru</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__wrapper">
+        <div class="footer__logo">
+          <Icon class='footer__logo-icon' name="icon-main-logo"/>
+        </div>
+        <Navigation navClass="footer__nav" className='footer__link' />
+      </div>
+    </div>
+  </Container>
+</footer>

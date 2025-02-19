@@ -1,0 +1,25 @@
+---
+import CustomImage from "@/components/CustomImage/CustomImage.astro";
+import interiorImages from "@/data/interiors";
+---
+
+<section class="interiors" id="interiors">
+  <div class="swiper interiors__swiper">
+    <div class="swiper-wrapper interiors__wrapper">
+      {
+        interiorImages.map(interior => (
+          <div class="swiper-slide interiors__slide">
+            <CustomImage 
+              image={{
+                desktop: interior.imagePath,
+                desktop2x: interior.imagePath2x
+              }}
+              altText="Интерьер жилого помещения"
+              className="interiors__img"
+            />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

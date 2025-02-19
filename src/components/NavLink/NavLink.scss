@@ -1,0 +1,20 @@
+.nav-link {
+  font-size: 26px;
+  line-height: 35px;
+  transition: color $transition-300;
+
+  @include hover-focus {
+    outline: none;
+    color: $color-fallow;
+  }
+
+  @include vp-1440 {
+    font-size: 22px;
+    line-height: 24px;
+  }
+
+  @media (max-width: 1208px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

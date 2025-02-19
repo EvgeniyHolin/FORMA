@@ -1,0 +1,50 @@
+.skills {
+  padding: 92px 0 99px;
+
+  @media (max-width: 1500px) {
+    padding: 0 0 99px;
+  }
+
+  @include vp-768 {
+    padding: 0 0 20px;
+  }
+
+  &__title {
+    margin: 0 0 81px;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 85px;
+    color: $color-fallow;
+    text-transform: uppercase;
+
+    @include vp-1440 {
+      font-size: 50px;
+      line-height: 50px;
+    }
+
+    @media (max-width: 1208px) {
+      margin: 0 0 60px;
+    }
+
+    @include vp-1024 {
+      font-size: 32px;
+      line-height: 32px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 20px;
+
+    @include vp-768 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+  }
+
+  &__item:last-child {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+  }
+}

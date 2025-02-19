@@ -1,0 +1,31 @@
+{
+  "name": "experts",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.0.1",
+    "@astrojs/rss": "^4.0.10",
+    "@astrojs/sitemap": "^3.2.1",
+    "accordion-js": "^3.4.0",
+    "astro": "^5.0.3",
+    "dotenv": "^16.4.7",
+    "inputmask": "^5.0.9",
+    "node-sass-glob-importer": "^5.3.3",
+    "swiper": "^11.2.1"
+  },
+  "devDependencies": {
+    "astro-icon": "^1.1.1",
+    "sass": "^1.79.5",
+    "stylelint": "^16.10.0",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-scss": "^6.7.0",
+    "vite-plugin-sass-glob-import": "^4.0.0"
+  }
+}

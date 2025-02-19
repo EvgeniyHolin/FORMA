@@ -1,0 +1,30 @@
+---
+import Container from "@/components/Container/Container.astro";
+import SkillCard from "@/components/SkillCard/SkillCard.astro";
+import skills from "@/data/skills";
+import addClass from "@/scripts/utils/add-class-skills";
+---
+
+<section class="skills">
+  <Container>
+    <h2 class="skills__title">Что мы&nbsp;умеем:</h2>
+    <ul class="skills__list">
+      {
+        skills.map(skill => (
+          <li class='skills__item'>
+            <SkillCard 
+              className={ addClass(skill.id) }
+              id={ skill.id }
+              text={ skill.text }
+              imagePath={ skill.imagePath }
+              imagePath2x={ skill.imagePath2x }
+              imagePathTablet={ skill.imagePathTablet }
+              imagePathTablet2x={ skill.imagePathTablet2x }
+              altText={ skill.altText }
+            />
+          </li>
+        ))
+      }
+    </ul>
+  </Container>
+</section>

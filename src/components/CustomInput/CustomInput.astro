@@ -1,0 +1,21 @@
+---
+interface Props {
+  id: string,
+  name: string
+  placeholder?: string,
+  ariaInfo: string,
+  required: boolean
+};
+
+const { id, name, placeholder, ariaInfo, required } = Astro.props;
+---
+
+<div class="custom-input">
+  <input class="custom-input__input" type="text" 
+    id={id} 
+    name={name} 
+    placeholder={placeholder} 
+    aria-label={ariaInfo}
+    required={required ? true : undefined}
+  >
+</div>

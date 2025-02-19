@@ -1,0 +1,48 @@
+.custom-input {
+  padding: 20px 35px;
+  flex-grow: 1;
+  background-color: $color-white-smoke;
+  border: 1px solid $color-white-smoke;
+  transition: border-color $transition-300;
+
+  $root: &;
+
+  @media (max-width: 1208px) {
+    padding: 8px 15px;
+  }
+
+  @include hover-focus {
+    border-color: $color-fallow;
+
+    & #{$root}__input {
+      &::placeholder {
+        color: $color-fallow;
+      }
+    }
+  }
+
+  &__input {
+    width: 100%;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 35px;
+    color: $color-nero;
+    background-color: inherit;
+    border: none;
+
+    &::placeholder {
+      color: inherit;
+      opacity: 1;
+      transition: color $transition-300;
+    }
+
+    @include focus {
+      outline: none;
+    }
+
+    @media (max-width: 1208px) {
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+}

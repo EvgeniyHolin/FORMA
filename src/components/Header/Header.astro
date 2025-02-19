@@ -1,0 +1,27 @@
+---
+import Container from '../Container/Container.astro';
+import CustomImage from '../CustomImage/CustomImage.astro';
+import Navigation from '../Navigation/Navigation.astro';
+import { Icon } from 'astro-icon/components';
+import MainImage from '@/data/main-image';
+import Burger from '../Burger/Burger.astro';
+---
+<header class="header" id="main">
+  <CustomImage 
+    image={{
+      desktop: MainImage.imagePath,
+      desktop2x: MainImage.imagePath2x
+    }}
+    altText="Интерьер жилого помещения"
+    className="header__main-image"
+  />
+  <Container>
+    <div class="header__wrapper">
+      <div class="header__logo">
+        <Icon class='header__logo-icon' name="icon-main-logo" />
+      </div>
+      <Navigation navClass='header__nav' className='header__link' />
+      <Burger />
+    </div>
+  </Container>
+</header>

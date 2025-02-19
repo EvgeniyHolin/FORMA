@@ -1,0 +1,9 @@
+---
+import CustomInput from "../CustomInput/CustomInput.astro"
+---
+
+<form class="feedback-form" id="feedback-form" method="post" action="#">
+  <CustomInput id="name" name="name" placeholder="Имя" ariaInfo="Ввод имени" required={true} />
+  <CustomInput id="phone" name="phone" placeholder="+7 (___) ___-__-__" ariaInfo="Ввод телефона"  required={true} />
+  <button class="feedback-form__btn" id="submit" type="submit" aria-label="Отправить заявку">Отправить</button>
+</form>

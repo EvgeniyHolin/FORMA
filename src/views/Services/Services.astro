@@ -1,0 +1,26 @@
+---
+import Container from "@/components/Container/Container.astro";
+import services from "@/data/services";
+---
+
+<section class="services" id="services">
+  <Container>
+    <div class="services__wrapper">
+      <h2 class="services__title">Услуги:</h2>
+      <div class="accordion-container services__accordion">
+        {
+          services.map(service => (
+            <div class="ac services__ac">
+              <h3 class="ac-header services__ac-header">
+                <button type="button" class="ac-trigger services__ac-trigger" set:html={ service.title }></button>
+              </h3>
+              <div class="ac-panel services__ac-panel">
+                <p class="ac-text services__ac-text" set:html={ service.text }></p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </Container>
+</section>

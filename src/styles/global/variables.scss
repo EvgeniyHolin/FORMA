@@ -1,0 +1,31 @@
+// Default
+$color-default-black: #000000;
+$color-default-white: #ffffff;
+$color-transparent: rgb(255 255 255 / 0%);
+
+// Project palette
+$color-nero: #151515;
+$color-white-smoke: #F2F2F2;
+$color-fallow: #C89B75;
+
+// Fonts
+$ff-helvetica: 'Helvetica', sans-serif;
+$ff-toxigenesis: 'Toxigenesis', serif;
+
+// Sizes
+$height-100vh: calc(100 * var(--vh, 1vh));
+$fz-default: 18px;
+
+// Viewports
+$vp-1440: 1440px;
+$vp-1024: 1024px;
+$vp-768: 768px;
+$vp-320: 320px;
+
+// Animations
+$transition-default: ease;
+$transition-ease-in: ease-in;
+
+$transition-300: 0.3s $transition-default;
+$transition-300-ease-in: 0.3s $transition-ease-in;
+$transition-200-ease-in: 0.2s $transition-ease-in;

@@ -1,0 +1,13 @@
+.main-nav {
+  display: flex;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    gap: 40px;
+
+    @media (max-width: 967px) {
+      gap: 25px;
+    }
+  }
+}

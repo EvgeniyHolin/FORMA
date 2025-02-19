@@ -1,0 +1,58 @@
+---
+import Container from "@/components/Container/Container.astro";
+import gallery from "@/data/gallery"
+import CustomImage from "@/components/CustomImage/CustomImage.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<section class="gallery" id="gallery">
+  <Container>
+    <h2 class="gallery__title">Галерея работ</h2>
+
+    <div class="gallery__navigation">
+      <button class="gallery__prev" aria-label="Предыдущий слайд">
+        <Icon class="gallery__icon" name="icon-prev"/>
+      </button>
+      <button class="gallery__next" aria-label="Следующий слайд">
+        <Icon class="gallery__icon" name="icon-next"/>
+      </button>
+    </div>
+
+
+    <div class="swiper gallery__swiper">
+      <div class="swiper-wrapper gallery__wrapper">
+        {
+          gallery.map(galObject => (
+            <div class="swiper-slide gallery__slide">
+              <div class="swiper gallery__swiper-inner">
+                <div class="swiper-wrapper gallery__wrapper-inner">
+                    {
+                      galObject.images.map(image => (
+                        <div class="swiper-slide gallery__slide-inner">
+                          <div class="gallery__picture">
+                            <CustomImage 
+                              image={{
+                                desktop: image.imgPath,
+                                desktop2x: image.imgPath2x,
+                              }}
+                              altText="Изображение объекта"
+                              className="gallery__image"
+                            />
+                          </div>
+                        </div>
+                      ))
+                    }
+                </div>
+              </div>
+              <div class="gallery__object">
+                <span class="gallery__text">
+                  &laquo;{galObject.name}&raquo; г. {galObject.city} {galObject.square}м2
+                </span>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </Container>
+</section>

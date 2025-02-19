@@ -1,0 +1,42 @@
+.feedback-form {
+  display: flex;
+  gap: 47px;
+
+  @media (max-width: 1208px) {
+    gap: 20px;
+  }
+
+  @include vp-768 {
+    flex-direction: column;
+    max-width: 400px;
+  }
+
+  &__btn {
+    padding: 20px;
+    width: 291px;
+    font-size: 25px;
+    line-height: 35px;
+    color: $color-nero;
+    background-color: $color-fallow;
+    border: 1px solid $color-fallow;
+    cursor: pointer;
+    transition: color $transition-300, border-color $transition-300;
+
+    @include hover-focus {
+      outline: none;
+      color: $color-white-smoke;
+      border-color: $color-white-smoke;
+    }
+
+    @media (max-width: 1208px) {
+      padding: 8px;
+      width: 210px;
+      font-size: 16px;
+      line-height: 16px;
+    }
+
+    @include vp-768 {
+      width: unset;
+    }
+  }
+}
