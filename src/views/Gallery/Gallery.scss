@@ -108,6 +108,9 @@
 
   &__slide {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     padding: 30px;
     flex-shrink: 0;
     width: 100%;
@@ -122,6 +125,8 @@
   }
 
   &__swiper-inner {
+    display: flex;
+    flex-grow: 1;
     overflow: hidden;
 
     @include vp-768 {
@@ -165,6 +170,7 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    text-align: center;
   }
 
   &__text {
@@ -174,7 +180,7 @@
     font-size: 35px;
     line-height: 35px;
 
-    @include vp-1024 {
+    @media (max-width: 1208px) {
       font-size: 25px;
       line-height: 25px;
     }

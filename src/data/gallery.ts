@@ -1,6 +1,6 @@
 interface GalleryImage {
   imgPath: string,
-  imgPath2x: string
+  imgPath2x?: string
 };
 
 interface GalleryObject {
@@ -11,6 +11,40 @@ interface GalleryObject {
 };
 
 const gallery: GalleryObject[] = [
+  {
+    name: 'ЖК Маршала Жукова',
+    city: 'Москва',
+    square: 93,
+    images: [
+      {
+        imgPath: '/src/images/gallery/marshalaZhukovaMsk/image-1.jpg'
+      },
+      {
+        imgPath: '/src/images/gallery/marshalaZhukovaMsk/image-2.jpg'
+      },
+      {
+        imgPath: '/src/images/gallery/marshalaZhukovaMsk/image-3.jpg'
+      },
+      {
+        imgPath: '/src/images/gallery/marshalaZhukovaMsk/image-4.jpg'
+      },
+      {
+        imgPath: '/src/images/gallery/marshalaZhukovaMsk/image-5.jpg'
+      },
+      {
+        imgPath: '/src/images/gallery/marshalaZhukovaMsk/image-6.jpg'
+      },
+      {
+        imgPath: '/src/images/gallery/marshalaZhukovaMsk/image-7.jpg'
+      },
+      {
+        imgPath: '/src/images/gallery/marshalaZhukovaMsk/image-8.jpg'
+      },
+      {
+        imgPath: '/src/images/gallery/marshalaZhukovaMsk/image-9.jpg'
+      }
+    ]
+  },
   {
     name: 'Бытха',
     city: 'Сочи',
