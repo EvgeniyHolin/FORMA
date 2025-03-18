@@ -51,17 +51,48 @@ const gallery: GalleryObject[] = [
     square: 76,
     images: [
       {
-        imgPath: '/src/images/gallery/bitha/image-1.jpg',
-        imgPath2x: '/src/images/gallery/bitha/image-1@2x.jpg'
+        imgPath: '/src/images/gallery/bitha/image-1.jpg'
       },
       {
-        imgPath: '/src/images/gallery/bitha/image-2.jpg',
-        imgPath2x: '/src/images/gallery/bitha/image-2@2x.jpg'
+        imgPath: '/src/images/gallery/bitha/image-2.jpg'
       },
       {
-        imgPath: '/src/images/gallery/bitha/image-3.jpg',
-        imgPath2x: '/src/images/gallery/bitha/image-3@2x.jpg'
+        imgPath: '/src/images/gallery/bitha/image-3.jpg'
       },
+      {
+        imgPath: '/src/images/gallery/bitha/image-4.jpg'
+      },
+      {
+        imgPath: '/src/images/gallery/bitha/image-5.jpg'
+      },
+    ]
+  },
+  {
+    name: 'ЖК Островитянова',
+    city: 'Москва',
+    square: 76,
+    images: [
+      {
+        imgPath: '/src/images/gallery/ostrovityanova/image-1.jpg'
+      },
+      {
+        imgPath: '/src/images/gallery/ostrovityanova/image-2.jpg'
+      },
+      {
+        imgPath: '/src/images/gallery/ostrovityanova/image-3.jpg'
+      },
+      {
+        imgPath: '/src/images/gallery/ostrovityanova/image-4.jpg'
+      },
+      {
+        imgPath: '/src/images/gallery/ostrovityanova/image-5.jpg'
+      },
+      {
+        imgPath: '/src/images/gallery/ostrovityanova/image-6.jpg'
+      },
+      {
+        imgPath: '/src/images/gallery/ostrovityanova/image-7.jpg'
+      }
     ]
   },
 ];
